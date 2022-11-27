@@ -1,0 +1,17 @@
+{
+	"name": "maiobarbero/every-flavour-beans",
+	"autoload": {
+		"psr-4": {
+			"EveryFlavourBeans\\": "./"
+		}
+	},
+	"authors": [
+		{
+			"name": "maiobarbero",
+			"email": "66015486+maiobarbero@users.noreply.github.com"
+		}
+	],
+	"require": {
+		"htmlburger/carbon-fields": "^3.3"
+	}
+}
