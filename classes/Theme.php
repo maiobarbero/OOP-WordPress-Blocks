@@ -5,8 +5,7 @@ namespace EveryFlavourBeans\Classes;
 use EveryFlavourBeans\Classes\Enqueues\Script;
 use EveryFlavourBeans\Classes\CustomType\CustomPost;
 use EveryFlavourBeans\Classes\CustomType\CustomTaxonomy;
-
-
+use EveryFlavourBeans\Classes\Enqueues\CleanUp;
 
 class Theme
 {
@@ -15,12 +14,20 @@ class Theme
   public CustomPost $customPost;
   public CustomTaxonomy $customTaxonomy;
   public Script $script;
+  public CleanUp $cleanup;
 
-  public function __construct()
+  public bool $removeHeadScript;
+
+  public function __construct($removeHeadScript = false)
   {
+    $this->removeHeadScript = $removeHeadScript;
     $this->customPost = new CustomPost();
     $this->customTaxonomy = new CustomTaxonomy();
     $this->script = new Script();
+
+    if ($this->removeHeadScript === true) {
+      $this->cleanup = new CleanUp();
+    }
 
     add_action('after_setup_theme', [$this, 'crb_load']);
 

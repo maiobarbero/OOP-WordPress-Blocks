@@ -24,12 +24,13 @@ Then:
 
 ### uselfullethods:
 
-Use this inside the functions.php file
+Use this inside the functions.php file, after creating a new instance of `Theme` class.
+<i>You can pass `true` as parameter of `Theme`to remove some WordPress scripts and other stuff</i>
 <strong>You can check the params to pass inside class/Theme.php</strong>
 
 - `addThemeSupport()` => add theme support (some value passed by default);
-- `$theme->script->script()` => register new script;
-- `$theme->script->script` => register new style;
+- `$theme->script->addScript()` => register new script;
+- `$theme->script->addStyle()` => register new style;
 - `addThemeSupport()` => add theme support (some value passed by default);
 - `loadTextdomain()` => load text domain;
 - `registerNavMenu()` => register nav menu (some value passed by default);
@@ -39,10 +40,7 @@ Use this inside the functions.php file
 - `customTaxonomy->register()` => register custom taxonomy;
 - `setBlockPath()` => set the block folder path;
 
-## block folder
+## Blocks folder (templates/blocks)
 
-Here you can add your blocks created with [Carbon Fields](https://docs.carbonfields.net/learn/containers/gutenberg-blocks.html)
-
-## Start the theme
-
-- First of all edit `gulp.babel.js` and change `const projectURL` with your local dev url.
+Here you can add your blocks created with [Carbon Fields](https://docs.carbonfields.net/learn/containers/gutenberg-blocks.html).
+It's possible to change the path to the folder passing it as parameter of `setBlockPath()`

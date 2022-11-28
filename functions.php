@@ -4,9 +4,11 @@ require_once get_template_directory() . '/vendor/autoload.php';
 use EveryFlavourBeans\Classes\Theme;
 
 
-$theme = new Theme();
+$theme = new Theme(true);
 
-$theme->script->addScript('efb', get_template_directory_uri() . '/dist/js/index.js', false, true);
+// Before start delete this part of code and write your own :)
+
+$theme->script->addScript('efb', get_template_directory_uri() . '/dist/js/main.js', '', false, true);
 $theme->script->addStyle('efb', get_template_directory_uri() . '/style.css');
 
 $theme->addImageSize('Cover', 1280, 720);

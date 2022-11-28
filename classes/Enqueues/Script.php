@@ -15,7 +15,7 @@ class Script
       $function();
     });
   }
-  private function comment()
+  public function comment()
   {
     if (
       get_option('thread_comments')
