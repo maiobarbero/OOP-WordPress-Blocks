@@ -5,8 +5,12 @@ use EveryFlavourBeans\Classes\Theme;
 
 
 $theme = new Theme();
+
+$theme->script->addScript('efb', get_template_directory_uri() . '/dist/js/index.js', false, true);
+$theme->script->addStyle('efb', get_template_directory_uri() . '/style.css');
+
 $theme->addImageSize('Cover', 1280, 720);
-$theme->customPost->registerPostType('book', [
+$theme->customPost->register('book', [
   'public' => true,
   'label' => 'Book',
   'supports' => array(
@@ -18,5 +22,5 @@ $theme->customPost->registerPostType('book', [
     'page-attributes'
   ),
 ]);
-$theme->customPost->registerTaxonomy('genre', 'book', ['label' => 'Genre']);
+$theme->customTaxonomy->register('genre', 'book', ['label' => 'Genre']);
 $theme->setBlockPath(get_template_directory() . '/templates/blocks');

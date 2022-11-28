@@ -2,16 +2,25 @@
 
 namespace EveryFlavourBeans\Classes;
 
-use EveryFlavourBeans\Classes\CustomPost;
+use EveryFlavourBeans\Classes\Enqueues\Script;
+use EveryFlavourBeans\Classes\CustomType\CustomPost;
+use EveryFlavourBeans\Classes\CustomType\CustomTaxonomy;
+
+
 
 class Theme
 {
   private string $blockPath;
+
   public CustomPost $customPost;
+  public CustomTaxonomy $customTaxonomy;
+  public Script $script;
 
   public function __construct()
   {
     $this->customPost = new CustomPost();
+    $this->customTaxonomy = new CustomTaxonomy();
+    $this->script = new Script();
 
     add_action('after_setup_theme', [$this, 'crb_load']);
 
