@@ -1,4 +1,4 @@
-# OOP--WordPress-Blocks
+# OOP-WordPress-Blocks
 
 ## How To use
 
