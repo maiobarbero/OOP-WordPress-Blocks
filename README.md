@@ -22,7 +22,7 @@ Then:
 
 <i>You can find all your script and images inside the dist folder</i>
 
-### uselfullethods:
+### Useful methods:
 
 Use this inside the functions.php file, after creating a new instance of `Theme` class.
 <i>You can pass `true` as parameter of `Theme`to remove some WordPress scripts and other stuff</i>
