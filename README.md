@@ -1,5 +1,16 @@
 # OOP-WordPress-Blocks
 
+Use this starter to speed up WordPress theme development
+
+## Some Features
+
+- BrowserSync and autorealod during dev mode;
+- [Carbon Fields](https://docs.carbonfields.net) features already included;
+- Object oriented
+- Images optimization with Webpack and convvertion to `.webp`;
+- Sass compiled into css minified;
+- Javascript bundle file
+
 ## How To use
 
 First of all you need to run:
@@ -16,9 +27,9 @@ npm install
 
 Then:
 
-- First of all edit `gulp.babel.js` and change `const projectURL` with your local dev url.
-- Run `npm run start` to start the dev enviroment
-- When the theme is ready for production run `npm run build`
+- First of all edit `webpack.config.js` and change `const LOCALURL` with your local dev url.
+- Run `npm run dev` to start the dev enviroment with BrowserSync and auto reload.
+- When the theme is ready for production run `npm run build` that will generate also the `.pot` file inside the langaue folder.
 
 <i>You can find all your script and images inside the dist folder</i>
 
@@ -44,15 +55,3 @@ Use this inside the functions.php file, after creating a new instance of `Theme`
 
 Here you can add your blocks created with [Carbon Fields](https://docs.carbonfields.net/learn/containers/gutenberg-blocks.html).
 It's possible to change the path to the folder passing it as parameter of `setBlockPath()`
-
-@todo
-
-<!-- - image min -->
-<!-- - webp -->
-<!-- - fonts -->
-
-- autoprefixer
-    <!-- - minify -->
-      <!-- - webserver -->
-      <!-- - autoreload -->
-  <!-- - empty dist folder -->
