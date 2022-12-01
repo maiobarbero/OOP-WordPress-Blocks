@@ -44,3 +44,15 @@ Use this inside the functions.php file, after creating a new instance of `Theme`
 
 Here you can add your blocks created with [Carbon Fields](https://docs.carbonfields.net/learn/containers/gutenberg-blocks.html).
 It's possible to change the path to the folder passing it as parameter of `setBlockPath()`
+
+@todo
+
+<!-- - image min -->
+<!-- - webp -->
+<!-- - fonts -->
+
+- autoprefixer
+    <!-- - minify -->
+      <!-- - webserver -->
+      <!-- - autoreload -->
+  <!-- - empty dist folder -->
