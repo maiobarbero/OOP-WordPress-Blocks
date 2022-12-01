@@ -6,7 +6,7 @@ Use this starter to speed up WordPress theme development
 
 - BrowserSync and autorealod during dev mode;
 - [Carbon Fields](https://docs.carbonfields.net) features already included;
-- Object oriented
+- Object oriented. Easily create CPT and custom taxonomy;
 - Images optimization with Webpack and convvertion to `.webp`;
 - Sass compiled into css minified;
 - Javascript bundle file
